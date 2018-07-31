@@ -12,10 +12,32 @@ function gcd(p, q) {
 
 ## 数组倒序
 <pre><code>
-var len = arr.length;
-for (var i = 0; i < len / 2; i++) {
-  var temp = arr[i];
-  arr[i] = arr[len - 1 - i];
-  arr[len - 1 - i] = temp;
+function reverse(arr) {
+  var len = arr.length;
+  for (var i = 0; i < len / 2; i++) {
+    var temp = arr[i];
+    arr[i] = arr[len - 1 - i];
+    arr[len - 1 - i] = temp;
+  }
+  return arr;
 }
 </code></pre>
+
+## 质数又称素数。一个大于1的自然数，除了1和它自身外，不能整除其他自然数的数叫做质数；否则称为合数。
+<pre><code>
+function isPrime(N) {
+  if (N < 2) return false;
+  for (var i = 2; i * i <= N; i++)
+    if (N % i === 0) return false;
+  return true;
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
