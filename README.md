@@ -9,3 +9,13 @@ function gcd(p, q) {
   return gcd(q, r);
 }
 </code></pre>
+
+## 数组倒序
+<pre><code>
+var len = arr.length;
+for (var i = 0; i < len / 2; i++) {
+  var temp = arr[i];
+  arr[i] = arr[len - 1 - i];
+  arr[len - 1 - i] = temp;
+}
+</code></pre>
