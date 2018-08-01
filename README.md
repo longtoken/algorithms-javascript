@@ -43,6 +43,31 @@ function H(N) {
 }
 </code></pre>
 
+## 随机返回
+<pre><code>
+// [a,b)
+function uniform(a, b) {
+  return a + Math.random() * (b - a);
+}
+// [0..N)
+function uniform(N) {
+  return Math.random() * N;
+}
+// [lo, hi)
+--- StdRandom.uniform(lo-)
+// 根据离散概率随机返回int值
+function discrete(arr) {
+  var r = Math.random();
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+    if (sum >= r) return i;
+  }
+  return -1;
+}
+// 随机排序
+
+</code></pre>
 
 
 
